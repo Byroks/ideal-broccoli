@@ -69,10 +69,9 @@ window#waybar.solo {
 #mode,
 #idle_inhibitor,
 #mpd {
-    padding: 0 10px;
+    padding: 0px 10px;
     margin: 0 4px;
     color: #ffffff;
-    background-color: #447250;
 }
 
 #battery.critical:not(.charging) {
@@ -85,8 +84,7 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #a1c400;
-    color: #000000;
+    color: #ffffff;
 }
 
 #pulseaudio.muted {

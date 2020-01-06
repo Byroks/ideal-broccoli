@@ -1,9 +1,9 @@
 {
     "layer": "top",
     "height": 17,
-    "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
-    "modules-center": [],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "clock", "battery", "battery#bat2"],
+    "modules-left": ["network", "sway/mode", "custom/media"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["pulseaudio", "cpu", "memory", "temperature", "backlight", "clock", "battery", "battery#bat2"],
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
@@ -41,12 +41,12 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "🌡️", ""]
+        "format-icons": ["🧊", "🌡️", "🔥"]
     },
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
-        "format-icons": ["💡", "💡"]
+        "format-icons": ["☁️ ", "🌥️", "⛅", "🌤️", "☀️ "]  
     },
     "battery": {
         "states": {
@@ -77,7 +77,7 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon}🅱️  {format_source}",
+        "format-bluetooth": "{volume}% 🅱️🦷  {format_source}",
         "format-bluetooth-muted": "🔇 {icon}🅱️  {format_source}",
         "format-muted": "🔇 {format_source}",
         "format-source": "{volume}% 🎙️",
@@ -85,8 +85,8 @@
         "format-icons": {
             "headphones": "🎧",
             "handsfree": "",
-            "headset": "",
-            "phone": "🎧",
+            "headset": "🎧",
+            "phone": "📞",
             "portable": "🎧",
             "car": "🚗",
             "default": ["🔈", "🔉", "🔊"]
@@ -98,11 +98,11 @@
         "return-type": "json",
         "max-length": 40,
         "format-icons": {
-            "spotify": "",
+            "spotify": "🪕",
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        // "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }
